@@ -20,7 +20,7 @@ require('./utils/cronJobs');
 
 // Create Express application
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5009;
 
 // ==================== MIDDLEWARE CONFIGURATION ====================
 
@@ -28,7 +28,7 @@ const port = process.env.PORT || 5000;
 app.use(cors()); 
 
 // Logging Middleware
-app.use(morgan('tiny')); // HTTP request logger
+app.use(morgan('dev')); // HTTP request logger
 
 // Body Parsing Middleware
 app.use(express.urlencoded({ extended: true }));
